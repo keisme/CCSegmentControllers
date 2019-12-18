@@ -8,8 +8,8 @@
 
 import UIKit
 
-public class CCBaseSegmentController: UIViewController {
+open class CCBaseSegmentController: UIViewController {
 
-    var ccParams: Any?
+    public var ccParams: Any?
     
 }
