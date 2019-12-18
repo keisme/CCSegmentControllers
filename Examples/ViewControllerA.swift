@@ -23,7 +23,7 @@ class ViewControllerA: CCBaseSegmentController {
             make.edges.equalToSuperview()
         }
         
-        if let player = params as? Player {
+        if let player = ccParams as? Player {
             label.text = "\(player.name), \(player.age)"
         }
     }

@@ -32,7 +32,7 @@ public class CCSegmentControllers: UIViewController {
     /// initialize
     /// - Parameter classes: (classtype, params)
     /// - Parameter selectedIndex: initial seleted index
-    init(classes: [(CCBaseSegmentController.Type, Any?)], selectedIndex: Int) {
+    public init(classes: [(CCBaseSegmentController.Type, Any?)], selectedIndex: Int) {
         self.classes = classes
         self.selectedIndex = selectedIndex
         self.childControllers = Array(repeating: nil, count: classes.count)
@@ -92,7 +92,7 @@ public class CCSegmentControllers: UIViewController {
     func addChildController(index: Int) -> CCBaseSegmentController {
         let v = classes[index]
         let vc = v.0.init()
-        vc.params = v.1
+        vc.ccParams = v.1
         childControllers[index] = vc
         addChild(vc)
         sv.addSubview(vc.view)

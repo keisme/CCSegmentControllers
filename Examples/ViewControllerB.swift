@@ -23,7 +23,7 @@ class ViewControllerB: CCBaseSegmentController {
             make.edges.equalToSuperview()
         }
         
-        if let (v1, v2) = params as? (String, String) {
+        if let (v1, v2) = ccParams as? (String, String) {
             label.text = "\(v1), \(v2)"
         }
     }

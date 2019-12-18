@@ -8,13 +8,8 @@
 
 import UIKit
 
-class CCBaseSegmentController: UIViewController {
+public class CCBaseSegmentController: UIViewController {
 
-    var params: Any?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+    var ccParams: Any?
     
 }
