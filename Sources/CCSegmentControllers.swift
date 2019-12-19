@@ -9,7 +9,7 @@
 import UIKit
 
 public protocol CCSegmentControllersDelegate: AnyObject {
-    func didScroll(_ index: Int)
+    func segmentController(_ segmentController: CCSegmentControllers, scrollTo index: Int)
 }
 
 public class CCSegmentControllers: UIViewController {
@@ -113,7 +113,7 @@ extension CCSegmentControllers: UIScrollViewDelegate {
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         selectedIndex = Int(scrollView.contentOffset.x / scrollView.bounds.width + 0.5)
         addChildControllerIfNeeded(index: selectedIndex)
-        delegate?.didScroll(selectedIndex)
+        delegate?.segmentController(self, scrollTo: selectedIndex)
     }
     
 }

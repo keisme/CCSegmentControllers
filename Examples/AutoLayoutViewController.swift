@@ -35,7 +35,7 @@ class AutoLayoutViewController: UIViewController {
 
 extension AutoLayoutViewController: CCSegmentControllersDelegate {
     
-    func didScroll(_ index: Int) {
+    func segmentController(_ segmentController: CCSegmentControllers, scrollTo index: Int) {
         print(index)
     }
     
