@@ -22,9 +22,10 @@ public class CCSegmentControllers: UIViewController {
         }
     }
     
+    public var childControllers: [CCBaseSegmentController?]!
+    
     private var classes: [(CCBaseSegmentController.Type, Any?)]!
     private var sv: UIScrollView!
-    private var childControllers: [CCBaseSegmentController?]!
     private var selectedIndex: Int!
     private var isInitial = true
 
