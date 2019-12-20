@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "CCSegmentControllers"
 
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
 
   spec.summary      = "Lazy init scrollable controllers quickly"
 
