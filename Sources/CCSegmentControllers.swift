@@ -23,9 +23,9 @@ public class CCSegmentControllers: UIViewController {
     }
     
     public var childControllers: [CCBaseSegmentController?]!
+    public var sv: UIScrollView!
     
     private var classes: [(CCBaseSegmentController.Type, Any?)]!
-    private var sv: UIScrollView!
     private var selectedIndex: Int!
     private var isInitial = true
 
@@ -74,10 +74,6 @@ public class CCSegmentControllers: UIViewController {
     }
     
     func addSv() {
-        if let gesture = navigationController?.interactivePopGestureRecognizer {
-            sv.panGestureRecognizer.require(toFail: gesture)
-        }
-        
         sv = UIScrollView()
         sv.delegate = self
         sv.isPagingEnabled = true
