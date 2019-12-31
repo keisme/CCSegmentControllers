@@ -74,6 +74,10 @@ public class CCSegmentControllers: UIViewController {
     }
     
     func addSv() {
+        if let gesture = navigationController?.interactivePopGestureRecognizer {
+            sv.panGestureRecognizer.require(toFail: gesture)
+        }
+        
         sv = UIScrollView()
         sv.delegate = self
         sv.isPagingEnabled = true
