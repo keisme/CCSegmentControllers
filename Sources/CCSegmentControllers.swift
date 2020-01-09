@@ -23,7 +23,7 @@ public class CCSegmentControllers: UIViewController {
     }
     
     public var childControllers: [CCBaseSegmentController?]!
-    public var sv: UIScrollView!
+    public var sv = UIScrollView()
     
     private var classes: [(CCBaseSegmentController.Type, Any?)]!
     private var selectedIndex: Int!
@@ -74,7 +74,6 @@ public class CCSegmentControllers: UIViewController {
     }
     
     func addSv() {
-        sv = UIScrollView()
         sv.delegate = self
         sv.isPagingEnabled = true
         sv.showsHorizontalScrollIndicator = false
